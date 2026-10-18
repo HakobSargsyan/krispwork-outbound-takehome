@@ -1,0 +1,29 @@
+{
+  "name": "krispwork-outbound-takehome",
+  "version": "1.0.0",
+  "description": "MCP server exposing find_leads and draft_email over leads.csv",
+  "private": true,
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "node --env-file=.env --import tsx src/server.ts",
+    "start": "node --env-file=.env dist/server.js",
+    "tunnel": "bash scripts/start-tunnel.sh"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "cookie-parser": "^1.4.7",
+    "csv-parse": "^7.0.3",
+    "express": "^5.3.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.7.2"
+  }
+}
